@@ -2,7 +2,8 @@
 import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { format } from 'date-fns';
-import { CalendarIcon, Check, X } from 'lucide-react';
+import { CalendarIcon, Check, Clock, X } from 'lucide-react';
+//import { CalendarIcon, Clock, Check, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Activity, ActivityFormData, ActivityStatus } from '@/lib/types';
 import { Button } from '@/components/ui/button';
@@ -137,7 +138,70 @@ export const ActivityForm = ({
                       />
                     </PopoverContent>
                   </Popover>
-                  <FormMessage />
+                  <FormLabel>Date and Time</FormLabel>
+                  <div className="flex flex-col sm:flex-row gap-2">
+                    <Popover>
+                      <PopoverTrigger asChild>
+                        <FormControl>
+                          <Button
+                            variant={"outline"}
+                            className={cn(
+                              "w-full sm:w-[240px] pl-3 text-left font-normal",
+                              !field.value && "text-muted-foreground"
+                            )}
+                          >
+                            {field.value ? (
+                              format(field.value, "PPP")
+                            ) : (
+                              <span>Pick a date</span>
+                            )}
+                            <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
+                          </Button>
+                        </FormControl>
+                      </PopoverTrigger>
+                      <PopoverContent className="w-auto p-0" align="start">
+                            <Calendar
+                              mode="single"
+                              selected={field.value}
+                              onSelect={(date) => {
+                                if (date) {
+                                  // Preserve the time when changing date
+                                  const currentDate = field.value || new Date();
+                                  date.setHours(currentDate.getHours());
+                                  date.setMinutes(currentDate.getMinutes());
+                                  field.onChange(date);
+                                }
+                              }}
+                              initialFocus
+                              className="p-3 pointer-events-auto"
+                            />
+                      </PopoverContent>
+                    </Popover>
+
+                    <div className="flex items-center gap-2">
+                      <FormControl>
+                        <div className="flex items-center gap-2">
+                          <Clock className="h-4 w-4 opacity-50" />
+                          <Input
+                            type="time"
+                            className="w-full sm:w-[140px]"
+                            value={field.value ? format(field.value, "HH:mm") : ""}
+                            onChange={(e) => {
+                              const timeValue = e.target.value;
+                              if (timeValue) {
+                                const [hours, minutes] = timeValue.split(':');
+                                const newDate = new Date(field.value || new Date());
+                                newDate.setHours(parseInt(hours, 10));
+                                newDate.setMinutes(parseInt(minutes, 10));
+                                field.onChange(newDate);
+                              }
+                            }}
+                          />
+                        </div>
+                      </FormControl>                        
+                    </div>
+                  </div>
+                   <FormMessage />
                 </FormItem>
               )}
             />

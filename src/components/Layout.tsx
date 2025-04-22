@@ -12,7 +12,7 @@ export const Layout = ({ children }: LayoutProps) => {
         <div className="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
           <h1 className="text-2xl font-bold text-gray-900 flex items-center">
             <span className="inline-block w-8 h-8 mr-2 bg-purple-500 rounded-md"></span>
-            Personal Activities Manager
+            Oliver's Personal Assistant
           </h1>
         </div>
       </header>
@@ -22,7 +22,7 @@ export const Layout = ({ children }: LayoutProps) => {
       <footer className="bg-white mt-auto py-4 border-t">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center text-sm text-gray-500">
-            Personal Activities Manager © {new Date().getFullYear()}
+            Oliver's Activities Manager © {new Date().getFullYear()}
           </p>
         </div>
       </footer>
