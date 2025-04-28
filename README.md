@@ -1,73 +1,66 @@
-# Welcome to your Lovable project
+# Personal Assistant Manager
 
-## Project info
+Welcome to **Personal Assistant Manager** - a productivity and workflow assistant crafted and maintained by **Oliver**.
 
-**URL**: https://lovable.dev/projects/897844b9-83a1-4a28-ba99-253cc625cbaf
+---
 
-## How can I edit this code?
 
-There are several ways of editing your application.
+### 1. **Working Locally with Your IDE**
 
-**Use Lovable**
+If you prefer to develop locally:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/897844b9-83a1-4a28-ba99-253cc625cbaf) and start prompting.
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/25thOliver/Personal-Assistant-Manager.git
+   cd Personal-Assistant-Manager
+   ```
+2. **Install dependencies:**
+   ```sh
+   npm install
+   ```
+3. **Start the development server:**
+   ```sh
+   npm run dev
+   ```
+   > **Tip:** Make sure you have Node.js and npm installed. [Install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating) if needed.
 
-Changes made via Lovable will be committed automatically to this repo.
+### 2. **Editing Directly on GitHub**
 
-**Use your preferred IDE**
+- Navigate to the file you want to edit.
+- Click the pencil icon ("Edit" button) at the top right.
+- Make your changes and commit directly from the browser.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### 3. **Using GitHub Codespaces**
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Go to your repository’s main page.
+- Click the green **"Code"** button, then select the **"Codespaces"** tab.
+- Click **"New codespace"** to launch a cloud development environment.
+- Make edits and commit/push as needed.
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 🧑‍💻 Tech Stack
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+This project uses the following technologies:
 
-# Step 3: Install the necessary dependencies.
-npm i
+- [Vite](https://vitejs.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [React](https://react.dev/)
+- [shadcn/ui](https://ui.shadcn.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+---
 
-**Edit a file directly in GitHub**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 👤 Maintainer
 
-**Use GitHub Codespaces**
+**Oliver**  
+[GitHub: 25thOliver](https://github.com/25thOliver)
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
+*Last updated: April 28, 2025*
 
-This project is built with:
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/897844b9-83a1-4a28-ba99-253cc625cbaf) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+**Feel free to reach out or open issues for feedback, suggestions, or contributions!**
